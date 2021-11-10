@@ -18,14 +18,14 @@ Metode pembayaran yang di support:
 
 1. PostgreSQL docker
   ```
-  $ docker run -d \
+  $ docker run -d --rm \
       --name invoice-db \
       -e POSTGRES_DB=invoice-db \
       -e POSTGRES_USER=invoice-user \
       -e POSTGRES_PASSWORD=DT92dPkjrK \
       -e PGDATA=/var/lib/postgresql/data/pgdata \
-      -v ./invoicedb-data:/var/lib/postgresql/data \
-      -p 54321:5432
+      -v {current-path}/invoicedb-data:/var/lib/postgresql/data \
+      -p 54321:5432 \
       postgres:13
   ```
 
